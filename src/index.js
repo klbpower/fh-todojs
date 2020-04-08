@@ -8,7 +8,8 @@ import {Todo, TodoList} from './classes';
 const todoList = new TodoList();
 const tarea = new Todo('aprender JS');
 
-
 todoList.nuevoTodo( tarea );
+
 console.log( todoList );
+
 crearTodoHtml( tarea );
