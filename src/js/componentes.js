@@ -15,9 +15,9 @@ export const crearTodoHtml = ( todo ) =>{
     const div     = document.createElement('div');
     div.innerHTML = htmlTodo;
 
-    divTodoList.append(div);
+    divTodoList.append( div.firstElementChild );
 
-    return div;
+    return div.firstElementChild;
 }
 
 /* <li class="completed" data-id="abc">
