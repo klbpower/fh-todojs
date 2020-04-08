@@ -7,4 +7,9 @@ import {Todo, TodoList} from './classes';
 
 const todoList = new TodoList();
 const tarea = new Todo('aprender JS');
-console.log(tarea);
+const tarea2 = new Todo('aprender JS 2');
+
+
+todoList.nuevoTodo( tarea );
+todoList.nuevoTodo( tarea2 );
+console.log(todoList);
