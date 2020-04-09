@@ -5,7 +5,8 @@ import './styles.css';
 import {Todo, TodoList} from './classes';
 /* Por defecto al importar classes coge index.js , espectacular, no hay que indicarlo*/ 
 
-const todoList = new TodoList();
+export const todoList = new TodoList();
+
 const tarea = new Todo('aprender JS');
 
 todoList.nuevoTodo( tarea );
