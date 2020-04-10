@@ -27,12 +27,10 @@ export const crearTodoHtml = ( todo ) =>{
 
 //Eventos
 txtInput.addEventListener('keyup', (event) => {
-    //console.log(event);
-    //enter
+    
     if( event.keyCode === 13 && txtInput.value.length>0){
         const nuevoTodo = new Todo( txtInput.value );
         todoList.nuevoTodo( nuevoTodo );
-        //console.log(  todoList );
 
         crearTodoHtml( nuevoTodo );
         txtInput.value = '';
@@ -48,7 +46,8 @@ divTodoList.addEventListener('click', (event) => {
         todoList.marcarCompletado( todoId );
         todoElemento.classList.toggle('completed');
     }
-    /*console.log( todoElemento );
-    console.log( todoId );
-    */
+    else if(nombreElemento.includes('button')){
+        todoList.eliminarTodo( todoId );
+        divTodoList.removeChild( todoElemento);
+    }
 });
